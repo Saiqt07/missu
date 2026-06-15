@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Place ❤️</title>
+    <meta name="description"
+        content="A private love space for Cyrus and Princess Lyka — No matter how many miles separate us, you're always close to my heart.">
+    <meta name="theme-color" content="#B8A9E8">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                    LOADING SCREEN                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-heart">💜</div>
+            <p class="loader-text">Loading Our Little Place...</p>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                   FLOATING HEARTS                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                      HOME / HERO                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section id="home" class="page active">
+        <div class="hero-bg">
+            <div class="hero-stars" aria-hidden="true"></div>
+            <div class="hero-gradient-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">💜 For Princess Lyka, with all my love</div>
+            <h1 class="hero-title">Our Little Place <span class="heart-icon">❤️</span></h1>
+            <p class="hero-subtitle">No matter how many miles separate us,<br>you're always close to my heart.</p>
+            <div class="hero-divider">
+                <span>✦</span>
+                <div class="divider-line"></div>
+                <span>✦</span>
+            </div>
+            <blockquote class="hero-quote">
+                <p>"Distance may separate where we are, but never what we feel. Every day brings us closer to March —
+                    the moment I finally get to see you again."</p>
+                <cite>— Cyrus, your forever</cite>
+            </blockquote>
+            <button id="enter-btn" class="hero-btn" aria-label="Enter Our World">
+                <span class="btn-sparkle">✨</span>
+                Enter Our World
+                <span class="btn-sparkle">✨</span>
+            </button>
+            <div class="hero-footer">
+                <span class="hero-location">🇵🇭 Ilocos Sur</span>
+                <span class="hero-heart-divider">💜</span>
+                <span class="hero-location">California 🇺🇸</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                      MAIN APP                              -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="main-app" class="hidden">
+
+        <!-- Navigation -->
+        <nav id="main-nav">
+            <div class="nav-brand">
+                <span class="nav-logo">💜</span>
+                <span class="nav-title">Our Little Place</span>
+            </div>
+            <div class="nav-links">
+                <button class="nav-link active" data-page="dashboard" id="nav-dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-label">Dashboard</span>
+                </button>
+                <button class="nav-link" data-page="open-when" id="nav-open-when">
+                    <span class="nav-icon">💌</span>
+                    <span class="nav-label">Open When</span>
+                </button>
+                <button class="nav-link" data-page="hear-my-voice" id="nav-hear-voice">
+                    <span class="nav-icon">🎙️</span>
+                    <span class="nav-label">Hear My Voice</span>
+                </button>
+                <button class="nav-link" data-page="love-letter" id="nav-love-letter">
+                    <span class="nav-icon">💌</span>
+                    <span class="nav-label">Love Letter</span>
+                </button>
+            </div>
+            <button class="nav-home-btn" id="nav-home-btn" aria-label="Back to Home">
+                <span>🏠</span>
+            </button>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--                    DASHBOARD PAGE                      -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <section id="dashboard" class="app-page active">
+            <div class="page-container">
+                <div class="page-header">
+                    <h2 class="page-title">LDR Dashboard 💜</h2>
+                    <p class="page-subtitle">Every number tells our story</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <!-- Days Together -->
+                    <div class="stat-card glass-card animate-on-scroll" id="days-together-card">
+                        <div class="stat-icon">💕</div>
+                        <div class="stat-value" id="days-together">0</div>
+                        <div class="stat-label">Days Together</div>
+                        <div class="stat-detail" id="days-detail"></div>
+                    </div>
+
+                    <!-- Distance -->
+                    <div class="stat-card glass-card animate-on-scroll" id="distance-card">
+                        <div class="stat-icon">🌏</div>
+                        <div class="stat-value">7,283 mi</div>
+                        <div class="stat-label">PH ↔ California</div>
+                        <div class="stat-detail">11,724 km across the Pacific</div>
+                    </div>
+
+                    <!-- Next Meeting Countdown -->
+                    <div class="stat-card glass-card countdown-card animate-on-scroll" id="countdown-card">
+                        <div class="stat-icon">✈️</div>
+                        <div class="stat-label-top">Next Meeting Countdown</div>
+                        <div class="countdown-grid">
+                            <div class="countdown-unit">
+                                <span class="countdown-number" id="countdown-days">0</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <span class="countdown-number" id="countdown-hours">0</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <span class="countdown-number" id="countdown-minutes">0</span>
+                                <span class="countdown-label">Mins</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <span class="countdown-number" id="countdown-seconds">0</span>
+                                <span class="countdown-label">Secs</span>
+                            </div>
+                        </div>
+                        <div class="stat-detail">Until March 2027 🥺</div>
+                    </div>
+                </div>
+
+                <!-- Live Clocks -->
+                <div class="clocks-section animate-on-scroll">
+                    <h3 class="section-title">Our Clocks 🕰️</h3>
+                    <div class="clocks-grid">
+                        <div class="clock-card glass-card">
+                            <div class="clock-flag">🇵🇭</div>
+                            <div class="clock-location">Ilocos Sur, PH</div>
+                            <div class="clock-name">Cyrus's Time</div>
+                            <div class="clock-time" id="time-ph">--:--:--</div>
+                            <div class="clock-date" id="date-ph">Loading...</div>
+                            <div class="clock-period" id="period-ph"></div>
+                        </div>
+                        <div class="clock-heart-connector">
+                            <div class="connector-line"></div>
+                            <span class="connector-heart">💜</span>
+                            <div class="connector-line"></div>
+                        </div>
+                        <div class="clock-card glass-card">
+                            <div class="clock-flag">🇺🇸</div>
+                            <div class="clock-location">California, USA</div>
+                            <div class="clock-name">Lyka's Time</div>
+                            <div class="clock-time" id="time-ca">--:--:--</div>
+                            <div class="clock-date" id="date-ca">Loading...</div>
+                            <div class="clock-period" id="period-ca"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestones Timeline -->
+                <div class="milestones-section animate-on-scroll">
+                    <h3 class="section-title">Our Milestones 💫</h3>
+                    <div class="timeline" id="timeline"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--                   OPEN WHEN PAGE                       -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <section id="open-when" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h2 class="page-title">Open When... 💌</h2>
+                    <p class="page-subtitle">Letters from my heart to yours — open when you need them most</p>
+                </div>
+
+                <div class="open-when-grid" id="open-when-grid">
+                    <!-- Cards are generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--                  HEAR MY VOICE PAGE                    -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <section id="hear-my-voice" class="app-page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h2 class="page-title">Hear My Voice 🎙️</h2>
+                    <p class="page-subtitle">Press play and let my voice remind you that I'm always here</p>
+                </div>
+
+                <div class="voice-grid" id="voice-grid">
+                    <!-- Audio cards are generated by JavaScript -->
+                </div>
+
+                <div class="voice-note glass-card animate-on-scroll">
+                    <p class="voice-note-text">🎧 Put your headphones on, close your eyes, and let my voice wrap around
+                        you like a warm hug. These recordings are pieces of my heart, saved just for you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--                  LOVE LETTER PAGE                     -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <section id="love-letter" class="app-page">
+            <div class="page-container">
+                <div class="page-header animate-on-scroll">
+                    <h2 class="page-title">Love Letter 💌</h2>
+                    <p class="page-subtitle">A message from the deepest part of my heart — written just for you</p>
+                </div>
+
+                <div class="love-letter-container glass-card animate-on-scroll">
+                    <div class="love-letter-header">
+                        <div class="love-letter-stamp">💜</div>
+                        <div class="love-letter-meta">
+                            <span class="love-letter-date">📅 June 13, 2026</span>
+                            <span class="love-letter-mood">Missing You</span>
+                        </div>
+                    </div>
+
+                    <div class="love-letter-content">
+                        <p class="love-letter-salutation">Baby,</p>
+                        <p>Ngayon na nasa magkaibang lugar na tayo, ang daming nagbago. Pero isa lang ang hindi ko
+                            gustong magbago—yung pag-alaga at pagrespeto ko sa’yo.</p>
+                        <p>Hindi ko ipapangako na magiging perfect ako araw-araw, o na mawawala lahat ng hirap ng
+                            distance natin. Pero ipinapangako ko na sa bawat araw, pipiliin kitang intindihin,
+                            pakinggan, at suportahan kahit malayo tayo sa isa’t isa.</p>
+                        <p>Alam kong may mga araw na mahirap, may mga araw na nami-miss natin ang presensya ng isa’t
+                            isa, at may mga araw na parang ang bigat ng lahat. Kapag ganun, sana maalala mo na hindi ka
+                            nag-iisa. Nandito ako, hindi lang sa magagandang araw, kundi pati sa mga araw na pagod ka,
+                            malungkot ka, o hindi ka okay.</p>
+                        <p>Gusto ko lang maging tahimik na lugar mo sa gitna ng lahat ng gulo—isang taong hindi ka
+                            pipilitin, hindi ka huhusgahan, at mananatili lang sa tabi mo habang hinaharap mo ang mga
+                            pangarap mo.</p>
+                        <p>Proud ako sa’yo. Sa lakas mo, kahit minsan hindi mo ramdam. Sa tapang mo na sumubok ng bagong
+                            buhay. At sa kung sino ka bilang tao.</p>
+                        <p>Kahit magkalayo tayo, lagi kang mahalaga sa’kin.</p>
+                        <div class="love-letter-signature">
+                            <p>Mahal kita, at nandito lang ako.</p>
+                            <p class="signature-name">Cyrus 💜</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- end #main-app -->
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                    OPEN WHEN MODAL                         -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close letter">&times;</button>
+            <div class="modal-bg-animation" aria-hidden="true"></div>
+            <div class="modal-content">
+                <div class="modal-icon" id="modal-icon">💌</div>
+                <h3 class="modal-title" id="modal-title">Open When...</h3>
+                <div class="modal-divider"></div>
+                <div class="modal-body" id="modal-body">
+                    <p class="modal-message" id="modal-message"></p>
+                </div>
+                <!-- Voice Note Player in Modal -->
+                <div class="modal-audio" id="modal-audio-section" style="display:none;">
+                    <div class="mini-audio-player">
+                        <button class="audio-play-btn" id="modal-audio-play" aria-label="Play voice note">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="audio-wave" id="modal-audio-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <span class="audio-label">Voice Note</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <p class="modal-sign">Forever yours, Cyrus 💜</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                   BACK TO TOP BUTTON                       -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
